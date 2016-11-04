@@ -31,6 +31,7 @@
 * Firefox
 * cyberduck
 * VNC Viewer
+* VLC
 
 ## 办公类
 * MacDown
