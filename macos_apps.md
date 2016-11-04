@@ -2,12 +2,10 @@
 
 ## 效率工具类
 * RescueTime
-* Alfred
 
 ## 开发类
 * XCode
 * vscode
-* Eclipse
 * SourceTree
 * Wireshark
 * Dash (cracked)
