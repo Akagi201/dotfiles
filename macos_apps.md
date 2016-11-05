@@ -57,6 +57,7 @@
 ## 管理软件
 * MacUpdate
 * Authy
+* AppCleaner
 
 ## 网络类
 * Shadowsocksx
