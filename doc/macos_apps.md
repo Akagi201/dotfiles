@@ -42,6 +42,7 @@
 * calibre
 * Evernote
 * Teamviewer
+* [Amethyst](https://ianyh.com/amethyst/)
 
 ## 命令行
 * tig
