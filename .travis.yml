@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 7
+script:
+  - curl -sL ellipsis.sh | sh
+  - ellipsis.sh install Akagi201/files
+branches:
+  only:
+    - master

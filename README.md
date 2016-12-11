@@ -1,6 +1,8 @@
 # Akagi201/files
 
-My dotfiles for *nix dev environments, compatible with [ellipsis][ellipsis].
+[![Build Status](https://travis-ci.org/Akagi201/dot-files.svg?branch=master)](https://travis-ci.org/Akagi201/dot-files)
+
+> My dotfiles for *nix dev environments, compatible with [ellipsis][ellipsis].
 
 ## Install
 * Clone and symlink
