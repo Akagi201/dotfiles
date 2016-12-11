@@ -8,4 +8,9 @@
 * Clone and symlink
 * Install with [ellipsis][ellipsis] `ellipsis install Akagi201/files`
 
+## Docs
+* [cli](doc/cli.md)
+* [macOS APP](doc/macos_app.md)
+* [macOS Config](doc/macos_config.md)
+
 [ellipsis]: <http://ellipsis.sh> "ellipsis"
