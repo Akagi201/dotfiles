@@ -1,0 +1,49 @@
+##############################################################################
+# @file gitconfig
+# @date 2016-12-11
+# @author Akagi201 <akagi201@gmail.com>
+# @license MIT
+##############################################################################
+
+[user]
+  name = Akagi201
+  email = akagi201@gmail.com
+
+[github]
+  user = Akagi201
+
+[core]
+  editor = vim
+	excludesfile = ~/.gitignore_global
+
+[color]
+  ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+
+[alias]
+  a = add
+  st = status
+  ci = commit -a -v
+  co = checkout
+  cob = checkout -b
+  com = checkout master
+  br = branch
+  df = diff
+  sh = show
+  mg = merge
+  cp = cherry-pick
+  rb = rebase
+  throw = reset --hard HEAD
+  throwh = reset --hard HEAD^
+
+[rebase]
+  autosquash = true
+
+[push]
+  default = simple
+
+##############################################################################
+# vim: ft=gitconfig
