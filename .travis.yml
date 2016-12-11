@@ -3,7 +3,7 @@ node_js:
   - 7
 script:
   - curl -sL ellipsis.sh | sh
-  - ellipsis.sh install Akagi201/files
+  - ellipsis install Akagi201/files
 branches:
   only:
     - master
