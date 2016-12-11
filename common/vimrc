@@ -1,0 +1,178 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" @file vimrc
+" @date 2016-12-11
+" @author Akagi201 <akagi201@gmail.com>
+" @license MIT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""" Plugins """"""""""""""""""""""""""
+" Vim-plug
+" Automatic installaion of vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !mkdir -p ~/.vim/autoload
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+call plug#begin('~/.vim/plugged')
+
+" Vim extensions
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+" Search
+Plug 'easymotion/vim-easymotion'
+
+" Buffers
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Markdown
+Plug 'vim-pandoc/vim-pantondoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
+" Editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" Git
+Plug 'tpope/vim-fugitive'
+
+" UI
+Plug 'bling/vim-airline'
+Plug 'flazz/vim-colorschemes'
+
+" Tmux
+Plug 'tmux-plugins/vim-tmux'
+
+call plug#end()
+
+""""""""""""""""""""""""" General """"""""""""""""""""""""""""
+" Necessary for cool features of vim
+set nocompatible
+
+" Sets how many lines of history VIM has to remember and undolevels
+set history=9999
+set undolevels=9999
+
+" Enable syntax highlighting
+syntax enable
+
+" If you want mouse support
+set mouse=a
+
+""""""""""""""""""""""""" UI """"""""""""""""""""""""""""
+
+" Set 256 colors in vim
+set t_Co=256
+
+" Set the title of the terminal
+set title
+
+"Always show current position
+set ruler
+
+"This is the most awesome configurationa ever, is shows both
+"the absolute and relative numbering together to make jumps
+"easier
+set number
+" set relativenumber
+nnoremap <silent><leader>n :set relativenumber!<cr>
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Mark the current line
+set cursorline
+
+""""""""""""""""""""""""" Search """"""""""""""""""""""""""""
+
+" When searching try to be smart about cases
+set smartcase
+set ignorecase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+""""""""""""""""""""""""" File """"""""""""""""""""""""""""
+
+" Set utf8 as standard encoding and en_US as the standard language
+set fileencoding=utf-8
+set encoding=utf8
+
+" vim unicode
+if has("multi_byte")
+    if &termencoding == ""
+        let &termencoding = &encoding
+    endif
+    set encoding=utf-8
+    setglobal fileencoding=utf-8
+    "setglobal bomb
+    set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+endif
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" Enable filetype plugins
+filetype on
+filetype plugin on
+filetype indent on
+
+""""""""""""""""""""""""" Text """"""""""""""""""""""""""""
+
+" Be smart when using tabs ;)
+set smarttab
+
+" Migrated to editorconfig
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab "Converts tabs into space characters
+
+" Textwrap at 80 haracters
+set tw=100
+set wrap
+
+" Tab completion
+set wildmenu
+set wildmode=list:longest,full
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+
+" Indentation
+set autoindent "Auto indent
+set smartindent "Smart indent
+
+"Adding omnicomplete
+set ofu=syntaxcomplete#Complete
+
+""""""""""""""""""""""""" Status """"""""""""""""""""""""""""
+
+" Always show the status line
+set laststatus=2
+
+"Show editor mode
+set showmode
+
+" Height of the command bar
+set cmdheight=1
+
