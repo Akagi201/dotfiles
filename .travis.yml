@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - 7
+env:
+  - PATH="$HOME/.ellipsis/bin:$PATH"
 script:
   - curl -sL ellipsis.sh | sh
   - ellipsis install Akagi201/files
