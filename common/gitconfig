@@ -45,5 +45,8 @@
 [push]
   default = simple
 
+[include]
+  path = ~/.gitinclude
+
 ##############################################################################
 # vim: ft=gitconfig
