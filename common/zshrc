@@ -121,5 +121,7 @@ export PATH="$HOME/bin/bento4/utils:$PATH"
 export PATH="$HOME/bin/depot_tools:$PATH"
 export PATH="$HOME/.ellipsis/bin:$PATH"
 
+export ELLIPSIS_PROTO="ssh"
+
 # for mattermost
 ulimit -n 8096
