@@ -121,6 +121,7 @@ export PATH="$HOME/bin/bento4/utils:$PATH"
 export PATH="$HOME/bin/depot_tools:$PATH"
 export PATH="$HOME/.ellipsis/bin:$PATH"
 
+export ELLIPSIS_USER="Akagi201"
 export ELLIPSIS_REPO="git@github.com:ellipsis/ellipsis.git"
 export ELLIPSIS_PROTO="ssh"
 
