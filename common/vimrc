@@ -24,6 +24,7 @@ Plug 'tpope/vim-repeat'
 
 " Search
 Plug 'easymotion/vim-easymotion'
+Plug 'terryma/vim-multiple-cursors'
 
 " Buffers
 Plug 'kien/ctrlp.vim'
@@ -176,3 +177,6 @@ set showmode
 " Height of the command bar
 set cmdheight=1
 
+""""""""""""""""""""""""" Plugin configs """"""""""""""""""""""""""""
+" easymotion
+let mapleader=","
