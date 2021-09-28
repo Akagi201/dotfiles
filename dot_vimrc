@@ -47,6 +47,9 @@ Plug 'flazz/vim-colorschemes'
 " Tmux
 Plug 'tmux-plugins/vim-tmux'
 
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
 
 """"""""""""""""""""""""" General """"""""""""""""""""""""""""
@@ -180,3 +183,6 @@ set cmdheight=1
 """"""""""""""""""""""""" Plugin configs """"""""""""""""""""""""""""
 " easymotion
 let mapleader=","
+
+" Securing Your Editor
+au BufNewFile,BufRead /private/**/gopass** setlocal noswapfile nobackup noundofile
