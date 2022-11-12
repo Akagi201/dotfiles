@@ -30,7 +30,7 @@ chezmoi cd
 
 ```sh
 chezmoi diff
-chezmoi apply -v
+chezmoi apply -v .zshrc
 ```
 
 ## Push to github

@@ -121,8 +121,4 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# Hishtory Config:
-export PATH="$PATH:/Users/akagi201/.hishtory"
-source /Users/akagi201/.hishtory/config.zsh
-
 eval "$(starship init zsh)"
