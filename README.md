@@ -1,5 +1,7 @@
 # dotfiles
 
+[![Chezmoi CI](https://github.com/Akagi201/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/Akagi201/dotfiles/actions/workflows/ci.yml)
+
 ## Tools
 
 ```sh
