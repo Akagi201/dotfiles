@@ -43,12 +43,28 @@
   autosquash = true
 
 [push]
-  default = simple
+	default = current
 
 [include]
   path = ~/.gitinclude
 
-[url "ssh://git@git.5th.im:2222/"]
-  insteadOf = https://git.5th.im/
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
 [pull]
   rebase = false
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[init]
+  defaultBranch = master
+
+[submodule]
+  recurse = true
