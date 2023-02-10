@@ -1,0 +1,70 @@
+Host *
+    SendEnv LANG LC_*
+    TCPKeepAlive yes
+    ServerAliveInterval 30
+    ServerAliveCountMax 50
+    StrictHostKeyChecking no
+    Compression yes
+    ForwardAgent yes
+    GSSAPIAuthentication no
+    ControlMaster auto
+    ControlPath /tmp/ssh-%r@%h:%p
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_ed25519
+    # ControlPersist 1h
+
+Host akjong
+    HostName 159.223.77.50
+    User akagi201
+    ForwardAgent yes
+    Port 22
+
+Host txcloud
+    HostName 106.54.246.177
+    User ubuntu
+    ForwardAgent yes
+    Port 22
+
+Host canary
+    HostName 192.168.3.34
+    User akagi201
+    ForwardAgent yes
+    Port 22
+
+Host studio
+    HostName 192.168.31.196
+    User akagi201
+    ForwardAgent yes
+    Port 22
+
+Host github.com
+    User git
+    ProxyCommand nc -x 127.0.0.1:7890 %h %p
+    IdentityFile ~/.ssh/id_rsa
+
+Host tun
+    Hostname t.akjong.com
+    User akagi201
+    ForwardAgent yes
+    Port 22
+    ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
+
+Host prod
+    HostName prod.akjong.com
+    User akagi201
+    ForwardAgent yes
+    Port 22
+
+Host rcanary
+    HostName 106.54.246.177
+    User akagi201
+    ForwardAgent yes
+    Port 8822
+
+Host lagdev
+    HostName 106.75.166.111
+    User lagdev
+    Port 36122
+    IdentityFile ~/.ssh/id_ed25519
