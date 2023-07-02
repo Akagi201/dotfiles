@@ -65,7 +65,7 @@ disabled = false
 format = "$symbol[${ram}( | ${swap})]($style) "
 threshold = 70
 style = "bold dimmed white"
-disabled = false
+disabled = true
 
 [username]
 format = "[$user]($style)@"
@@ -88,8 +88,11 @@ style = "bold green"
 format = "[$symbol$version]($style) "
 style = "bold green"
 
+[docker_context]
+disabled = true
+
 [time]
 time_format = "%T"
 format = "🕙 $time($style) "
 style = "bright-white"
-disabled = false
+disabled = true
