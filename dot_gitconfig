@@ -38,15 +38,20 @@
   rb = rebase
   throw = reset --hard HEAD
   throwh = reset --hard HEAD^
+  unadd = reset --mixed
 
 [rebase]
   autosquash = true
 
 [push]
 	default = current
+	autosetupremote = true
 
 [include]
   path = ~/.gitinclude
+
+[includeIf "gitdir:~/src/github.com/"]
+  path = ~/src/github.com/.gitconfig
 
 [merge]
   conflictstyle = diff3
@@ -65,6 +70,18 @@
 
 [init]
   defaultBranch = master
+	templatedir = /Users/akagi201/.git-template
 
 [submodule]
-  recurse = true
+	recurse = true
+
+[diff]
+  algorithm = histogram
+	submodule = log
+
+[help]
+  autocorrect = 10
+[status]
+	submoduleSummary = true
+[branch]
+	sort = -committerdate
